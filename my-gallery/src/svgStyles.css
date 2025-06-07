@@ -1,0 +1,77 @@
+.svg-canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    transform: rotateX(0deg);
+    transition: transform 0.6s ease;
+}
+
+
+.svg-canvas > canvas:hover + svg circle {
+    stroke: red;
+    stroke-width: 4px;
+}
+
+.svg-canvas svg circle:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.moving-circle {
+    animation: moveCircle 4s linear infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(100px) translateY(0);
+    }
+    50% {
+        transform: translateX(100px) translateY(50px);
+    }
+    75% {
+        transform: translateX(0px) translateY(50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* 2D transformace a vendor */
+.svg-canvas svg {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transition: transform 0.6s ease;
+    -webkit-transition: -webkit-transform 0.6s ease;
+}
+
+.svg-canvas:hover svg {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+}
+
+/* Media query pro mobilní zařízení */
+@media (max-width: 600px) {
+    .svg-canvas {
+        padding: 0.5rem;
+        transform: scale(0.95);
+    }
+
+    .svg-canvas svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .svg-canvas canvas {
+        width: 90%;
+        height: auto;
+    }
+}

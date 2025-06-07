@@ -1,0 +1,46 @@
+.upload-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.upload-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.upload-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.upload-form input:focus {
+    border-color: rgba(160, 181, 109, 0.53);
+    outline: none;
+}
+
+.upload-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: rgba(135, 152, 94, 0.88);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-form button:hover {
+    background-color: rgba(61, 78, 42, 0.88);
+}
