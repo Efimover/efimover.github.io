@@ -1,7 +1,7 @@
 {
-  "name": "Interaktivní galerie",
-  "short_name": "Galerie",
-  "start_url": "/my-gallery/",
+  "short_name": "React App",
+  "name": "Create React App Sample",
+
   "icons": [
     {
       "src": "favicon.ico",
